@@ -1,8 +1,4 @@
 from django.test import TestCase
-<<<<<<< HEAD
-
-# Create your tests here.
-=======
 from datetime import datetime
 from .models import *
 
@@ -166,4 +162,3 @@ class ModelTestCase(TestCase):
         user = self.create_userinfo()
         self.assertTrue(isinstance(user, ClientInformations))
         self.assertEqual(user.__unicode__(), user.fullname)
->>>>>>> BugFix
