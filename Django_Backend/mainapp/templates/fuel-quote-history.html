@@ -15,12 +15,12 @@
     <tbody>
       {% for row in data %}
       <tr>
-        <td scope="row">{{row.id}}</td>
+        <td scope="row">{{forloop.counter}}</td>
         <td>{{row.req_gallons}}</td>
         <td>{{row.del_address}}</td>
         <td>{{row.delivery_date}}</td>
-        <td>${{row.sugg_price}}</td>
-        <td>${{row.req_gallons|mul:row.sugg_price}}</td>
+        <td>{{row.sugg_price}}</td>
+        <td>{{row.req_gallons|mul:row.sugg_price}}</td>
       </tr>
       {% endfor %}
     </tbody>
