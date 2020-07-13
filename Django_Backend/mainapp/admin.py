@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-from django.contrib import admin
-=======
 # from django.contrib import admin
->>>>>>> BugFix
 # from .models import QuoteHistory
 
 
