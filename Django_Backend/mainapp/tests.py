@@ -299,22 +299,22 @@ class ViewsTestCase(TestCase):
 
 
 class ModelTestCase(TestCase):
-    def create_user(self):
+    def test_create_user(self):
         return UserCredentials.objects.create(username="testuser", password="test123", confirm_password="test123")
 
-    def create_state(self):
-        return States.objects.create(cide="AB", name="Abibas")
+    def test_create_state(self):
+        return States.objects.create(code="AB", name="Abibas")
 
-    def create_userinfo(self):
-        user = self.create_user()
+    def test_create_userinfo(self):
+        user = self.test_create_user()
         return ClientInformations.objects.create(userid=user, fullname="Test User", address1="Test Address", city="Test City", state="AB", zipcode="223232")
 
     def test_user_creation(self):
-        user = self.create_user()
+        user = self.test_create_user()
         self.assertTrue(isinstance(user, UserCredentials))
         self.assertEqual(user.__unicode__(), user.username)
 
     def test_profile_creation(self):
-        user = self.create_userinfo()
+        user = self.test_create_userinfo()
         self.assertTrue(isinstance(user, ClientInformations))
         self.assertEqual(user.__unicode__(), user.fullname)

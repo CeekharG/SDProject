@@ -48,7 +48,7 @@ class UserProfileForm(forms.Form):
 
 
 class FuelQuoteForm(forms.Form):
-    
+
     gallonreq = forms.CharField(required=True,
                                 widget=forms.NumberInput(attrs={'class': 'form-control', 'step': '1'}))
 
