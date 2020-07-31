@@ -117,14 +117,14 @@ class ViewsTestCase(TestCase):
             'http://127.0.0.1:8000/create_profile', {'fullname': '', 'address1': 'Test Address'})
         self.assertEqual(response.status_code, PAGE_FOUND)
 
-    # create user  profile
-    # def test_user_profile(self):
-    #     session = self.client.session
-    #     session['id'] = '1'
-    #     session.save()
-    #     response = self.client.post(
-    #         'http://127.0.0.1:8000/create_profile', {'fullname': 'Test User', 'address_1': 'Test Address', 'address_2': 'TEST', 'city': 'Test City', 'state': 'AB', 'zip': '23232'})
-    #     self.assertEqual(response.status_code, RIDIRECTED)
+    # create profile
+    def test_user_profile(self):
+        session = self.client.session
+        session['id'] = '1'
+        session.save()
+        response = self.client.post(
+            'http://127.0.0.1:8000/create_profile', {'fullname': 'Test User', 'address_1': 'Test Address', 'address_2': 'TEST', 'city': 'Test City', 'state': 'TX', 'zip': '23232'})
+        self.assertEqual(response.status_code, RIDIRECTED)
 
     # redirect to edit profile page
     def test_user_profile_click(self):
