@@ -1,5 +1,5 @@
 # Client Software Application 
-# Live Server Link : https://tinyurl.com/sdproject20
+# Live Server Link : http://sdproject.shikhargiri.com.np
 Description: 
 A partner of your company has requested to build a software application that will predict the rate of the fuel based on the following criteria:
 - Client Location (in-state or out-of-state)
