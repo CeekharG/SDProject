@@ -31,8 +31,8 @@ section {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
 }
 
@@ -162,6 +162,12 @@ form:before {
   border-top: 1px solid #000;
 }
 
+form h1 {
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
 
 form h1:after {
   content: "";

@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google" content="notranslate" />
 
-    <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <link
       rel="shortcut icon"
       type="image/png"
       href="{% static 'img/favicon.ico' %}"
-    />
+      />
     <link rel="stylesheet" href="{% static 'css/robotogooglefonts.css' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
@@ -27,11 +27,22 @@
         <div class="container-fluid">
           {% block content %} {% endblock content %}
         </div>
-        <div class="logout">
-          <form action="/logout" method="get">
-            <span>Logged in as {{loginuser}} </span
-            ><button type="submit" class="logout-btn">Logout</button>
-          </form>
+        <div class="login-user">
+          <div class="login-user-warpper">
+            <div>
+              <span>Logged in as {{loginuser}} </span>
+            </div>
+            <div class="edit-profile">
+              <form action="/edit_profile" method="get">
+                <button type="submit" class="logout-btn">Edit Profile</button>
+              </form>
+            </div>
+            <div class="logout">
+              <form action="/logout" method="get">
+                <button type="submit" class="logout-btn">Logout</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

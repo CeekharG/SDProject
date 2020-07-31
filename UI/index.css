@@ -1,6 +1,19 @@
+
 body {
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: #fdfdfd;
 }
+
+.head_text {
+  color: white;
+}
+
+.card {
+  box-shadow: 0 16px 48px #e3e7eb;
+}
+
 
 #sidebar-wrapper {
   min-height: 100vh;
