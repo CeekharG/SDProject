@@ -83,6 +83,7 @@ def register(request):
             messages.error(
                 request, "Short Password or Password did not match!")
     else:
+        request.session.flush()
         form = RegisterForm(initial=initial_data)
     return render(request, 'register.html', {'form': form.as_p})
 
