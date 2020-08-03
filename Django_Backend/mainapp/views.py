@@ -142,7 +142,7 @@ def user_profile(request):
                 userinfo.save()
                 return HttpResponseRedirect('/login')
         else:
-            messages.error(request, "Data you entered is not valid!")
+            messages.error(request, "Please Check for invalid data/missing field")
 
     else:
         if request.session.has_key('username') and request.session.has_key('password'):
